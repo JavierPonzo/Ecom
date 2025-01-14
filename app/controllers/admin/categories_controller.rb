@@ -25,7 +25,7 @@ class Admin::CategoriesController < AdminsController
 
     respond_to do |format|
       if @admin_category.save
-        format.html { redirect_to @admin_category, notice: "Category was successfully created." }
+        format.html { redirect_to admin_categories_path, notice: "Category was successfully created." }
         format.json { render :show, status: :created, location: @admin_category }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -42,7 +42,7 @@ class Admin::CategoriesController < AdminsController
         format.json { render :show, status: :ok, location: @admin_category }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @admin_category.errors, status: :unprocessable_entity }
+        format.json { render json: admin_categories_path.errors, status: :unprocessable_entity }
       end
     end
   end
