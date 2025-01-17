@@ -24,7 +24,7 @@
   <div class="my-5">
     <% if admin_product.images.any? %>
       <% admin_product.images.each do |image| %>
-        <%= image_tag image, class: "w-20 h-20 object-cover rounded-md", style: "height: 20px, width: 20px " %>
+        <%= image_tag image, class: "w-20 h-20 object-cover rounded-md flex", size: "100x100" %>
       <% end %>
     <% end %>
     <%= form.label :images %>
